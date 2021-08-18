@@ -1,7 +1,13 @@
 import React from 'react';
 import { MemoryRouter as Router, Switch, Route } from 'react-router-dom';
+import AgoraRtcEngine from 'agora-electron-sdk';
 import icon from '../../assets/icon.svg';
 import './App.global.css';
+
+const APP_ID = 'b33f944c14344c42b4f7f8e039cb913c';
+
+const rtcEngine = new AgoraRtcEngine();
+rtcEngine.initialize(APP_ID);
 
 const Hello = () => {
   return (
